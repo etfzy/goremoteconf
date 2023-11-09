@@ -37,7 +37,7 @@ func TestConfig(t *testing.T) {
 			Username:  "",
 			Password:  "",
 			Servers:   []string{""},
-			Port:      8848,
+			Port:      ,
 		})
 		if err != nil {
 			fmt.Println(err)
@@ -50,7 +50,7 @@ func TestConfig(t *testing.T) {
 			EventCall: callnacos,
 		}
 
-		remoteConf, err := goconf.New(watch, callnacos, remote)
+		remoteConf, err := goconf.New(watch, remote)
 		if err != nil {
 			fmt.Println(err)
 			t.Fail()
