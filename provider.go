@@ -14,7 +14,7 @@ type RemoteConfInfos struct {
 	remote remote.Remote
 }
 
-func New(watch interface{}, callback interface{}, remote remote.Remote) (RemoteConf, error) {
+func New(watch interface{}, remote remote.Remote) (RemoteConf, error) {
 	temp := &RemoteConfInfos{
 		conf:   config.New(),
 		remote: remote,
